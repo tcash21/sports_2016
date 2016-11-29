@@ -168,6 +168,16 @@ result$possessions.TEAM2 <- result$HALF_FGA.TEAM2 + (result$HALF_FTA.TEAM2 / 2) 
 
 result <- subset(result, select=c(GAME_ID, GAME_DATE, TEAM.TEAM1, TEAM.TEAM2, HALF_PTS.TEAM1, HALF_PTS.TEAM2, LINE_HALF.TEAM1, SPREAD_HALF.TEAM1, LINE.TEAM1, SPREAD.TEAM1, possessions.TEAM1, possessions.TEAM2))
 
+library(randomForest)
+result$poss.total <- result$possessions.TEAM1 + result$possessions.TEAM2
+result$first.half.pts.total <- result$HALF_PTS.TEAM1 + result$HALF_PTS.TEAM2
+result$signal2 <- result$poss.total / result$first.half.pts.total
+result$line_diff <- as.numeric(result$LINE.TEAM1) - as.numeric(result$LINE_HALF.TEAM1)
+
+load("/home/ec2-user/sports2016/NBA/rf.dat")
+p <- predict(r, result)
+result$over_pred <- p
+
 library(googlesheets)
 library(dplyr)
 
