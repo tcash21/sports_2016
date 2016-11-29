@@ -1,0 +1,407 @@
+sb_team,espn_abbr
+"Louisiana Tech",LT
+"Texas A&M",TAMU
+Radford,RAD
+Vermont,UVM
+"UL - Monroe",ULM
+Mercer,MER
+"Cleveland State",CLEV
+NJIT,NJIT
+"Illinois State",ILST
+"Old Dominion",ODU
+"Oral Roberts",ORU
+"Loyola Chicago",L-IL
+Evansville,EVAN
+"Eastern Illinois",EIU
+"Kent State",KENT
+"Texas A&M Corpus",AMCC
+"Murray State",MURR
+Tulsa,TLSA
+Colorado,COLO
+"Seattle U",SEA
+"Wichita State (N)",WICH
+"Notre Dame (N)",ND
+"North Carolina (N)",UNC
+"Wisconsin (N)",WIS
+"West Virginia (N)",WVU
+"Kentucky (N)",UK
+"Xavier (N)",XAV
+"Arizona (N)",ARIZ
+"UCLA (N)",UCLA
+"Gonzaga (N)",GONZ
+"NC State (N)",NCST
+"Louisville (N)",LOU
+"Duke (N)",DUKE
+"Michigan State (N)",MSU
+"Oklahoma (N)",OKLA
+Vanderbilt,VAN
+Stanford,STAN
+"Miami Florida",MIA
+Richmond,RICH
+"Evansville (N)",EVAN
+"UL - Lafayette (N)",ULL
+"Kent State (N)",KENT
+"Northern Arizona (N)",NAU
+"Miami Florida (N)",MIA
+"Temple (N)",TEM
+"Stanford (N)",STAN
+"Old Dominion (N)",ODU
+VMI,VMI
+"Penn State",PSU
+Towson,TOWS
+"La Salle",LAS
+"South Dakota",SDAK
+"Northern Illinois",NIU
+Harvard,HARV
+Providence,PROV
+"Wright State",WRST
+"CS Northridge",CSN
+"Central Florida",UCF
+Davidson,DAV
+"The Citadel",CIT
+Butler,BUT
+"Southern Miss",USM
+Memphis,MEM
+Fordham,FOR
+"UT Arlington",UTA
+Lipscomb,LIP
+"Wisc Milwaukee",MILW
+"Western Michigan",WMU
+Depaul,DEP
+"Akron (N)",AKR
+"Cleveland State (N)",CLEV
+Idaho,IDHO
+"San Jose State",SJSU
+Denver,DEN
+"Santa Clara",SCU
+"Mt. St. Mary's",MSM
+"Ohio State",OSU
+"Wake Forest",WAKE
+Bucknell,BUCK
+"Texas San Antonio",UTSA
+Clemson,CLEM
+Iona,IONA
+Valparaiso,VALP
+"North Dakota State",NDSU
+Illinois,ILL
+Fairfield,FAIR
+"North Carolina",UNC
+Niagara,NIAG
+"St. Josephs",JOES
+"South Alabama",USA
+"NC State",NCST
+Portland,PORT
+"UC Davis",UCD
+Nevada,NEV
+"Montana State",MTST
+"Loyola Marymount",LMU
+"Cal Irvine",UCI
+Siena,SIE
+Wisconsin,WIS
+"Coastal Carolina",CCAR
+Hawaii,HAW
+"Cal Poly SLO",CP
+UCLA,UCLA
+Tennessee,TENN
+"Georgia Tech",GT
+Wyoming,WYO
+"Indiana State",INST
+"Charlotte U",CHAR
+"East Carolina",ECU
+"James Madison",JMU
+"West Virginia",WVU
+Elon,ELON
+Michigan,MICH
+"Austin Peay",PEAY
+Indiana,IND
+"Tennessee State",TNST
+Ohio,OHIO
+"Eastern Kentucky",EKY
+"NC Wilmington",UNCW
+Virginia,UVA
+"George Washington",GW
+"Georgia Southern",GASO
+Mississippi,MISS
+Drake,DRKE
+Tulane,TULN
+Bradley,BRAD
+Arizona,ARIZ
+"Weber State",WEB
+"South Dakota St",SDST
+Columbia,CLMB
+"Kansas State",KSU
+IUPUI,IUPU
+Marquette,MARQ
+"Tennessee Tech",TNTC
+"Air Force",AFA
+"Northern Arizona",NAU
+"Boise State",BSU
+"San Diego State",
+Utah,UTAH
+Rice,RICE
+"San Francisco",SF
+"Cal Santa Barbara",UCSB
+California,CAL
+Manhattan,MAN
+"Saint Marys CA",SMC
+Belmont,BEL
+"Arizona State",ASU
+Monmouth,MONM
+USC,USC
+Baylor,BAY
+Oregon,ORE
+BYU,BYU
+"Long Beach State",LBSU
+"Kennesaw St",KENN
+LSU,LSU
+"Wisc Green Bay",GB
+"East Tenn State",ETSU
+"Stephen F. Austin",SFA
+"Northern Iowa",UNI
+Alabama,ALA
+Dayton,DAY
+Missouri,MIZ
+Xavier,XAV
+"St. Bonaventure",SBON
+Syracuse,SYR
+Furman,FUR
+"Appalachian State",APP
+Dartmouth,DART
+Marist,MRST
+Duke,DUKE
+Kentucky,UK
+"Illinois Chicago",UIC
+"Western Illinois",WIU
+Nebraska,NEB
+Villanova,NOVA
+Georgetown,GTWN
+Maryland,MD
+"Michigan State",MSU
+Kansas,KU
+"CS Fullerton",CSF
+Pacific,PAC
+Toledo,TOL
+"Youngstown State",YSU
+"Eastern Michigan",EMU
+Oakland,OAK
+Cincinnati,CIN
+"Bowling Green",BGSU
+"Jacksonville State",JVST
+"Virginia Tech",VT
+Akron,AKR
+Arkansas,ARK
+"Saint Louis",SLU
+"SIU Edwardsville",SIUE
+"Southern Utah",SUU
+UNLV,UNLV
+Temple,TEM
+Minnesota,MINN
+Rutgers,RUTG
+"St. Johns",SJU
+UAB,UAB
+Troy,TROY
+"George Mason",GMU
+"Oklahoma State",OKST
+Hofstra,HOF
+"Florida State",FSU
+"Mississippi St",MSST
+"Texas Tech",TTU
+"Florida Atlantic",FAU
+Northeastern,NE
+Detroit,DET
+Pittsburgh,PITT
+"Idaho State",IDST
+"Washington State",WSU
+Pennsylvania,PENN
+Washington,WASH
+Cornell,COR
+Canisius,CAN
+"St. Peter's",SPU
+Princeton,PRIN
+"Texas State",TXST
+UTEP,UTEP
+"MD Baltimore Co",UMBC
+"No. Colorado",UNCO
+"Morehead State",MORE
+"Northern Kentucky",NKU
+Buffalo,BUFF
+"North Carolina A&T",NCAT
+"Florida Intl",FIU
+"Tennessee Martin",UTM
+"Missouri State",MOST
+"Mississippi State",MSST
+Yale,YALE
+SMU,SMU
+Purdue,PUR
+Florida,FLA
+"North Dakota",UND
+"Fla Gulf Coast",FGCU
+Duquesne,DUQ
+Pepperdine,PEPP
+"Tenn Chattanooga",CHAT
+"Iowa State",ISU
+"Western Kentucky",WKU
+"Central Michigan",CMU
+TCU,TCU
+"Rhode Island",URI
+IPFW,IPFW
+"Miami Ohio",M-OH
+Samford,SAM
+"North Texas",UNT
+Drexel,DREX
+"Ala Anchorage",UAA
+Iowa,IOWA
+"Notre Dame",ND
+"Memphis (N)",MEM
+"Ohio State (N)",OSU
+"Northwestern State",NWST
+Auburn,AUB
+"NC Asheville",UNCA
+"Middle Tenn St",MTSU
+"Alabama State",ALST
+"Chicago St",CHS
+"Jacksonville St",JVST
+"Tennessee Chat",CHAT
+Georgia,UGA
+"Seton Hall",HALL
+"Va Commonwealth",VCU
+"Mercer (N)",MER
+"Western Michigan (N)",WMU
+"Western Carolina",
+"South Carolina",SCAR
+"Arkansas State",ARST
+"SE Missouri State",
+"Southern Illinois",
+Grambling,GRAM
+"South Florida",USF
+Delaware,DEL
+"Central Arkansas",
+Oklahoma,OKLA
+"Mississippi (N)",MISS
+"Massachusetts (N)",UMASS
+"Appalachian State (N)",APP
+"Hofstra (N)",HOF
+"Florida State (N)",FSU
+"Va Commonwealth (N)",VCU
+"Oregon (N)",ORE
+"Navy (N)",NAVY
+Montana,MONT
+Gonzaga,GONZ
+"Connecticut (N)",CONN
+"Auburn (N)",AUB
+"Illinois Chicago (N)",UIC
+"Illinois (N)",ILL
+"Minnesota (N)",MINN
+"Oklahoma State (N)",OKST
+"Chicago State",
+Northwestern,
+"New Mexico State",NMSU
+"New Mexico",
+"Colorado State (N)",CSU
+"Kansas State (N)",KSU
+"Drake (N)",DRKE
+"Iowa (N)",IOWA
+"Purdue (N)",PUR
+"Butler (N)",BUT
+"Iowa State (N)",ISU
+"Northern Iowa (N)",UNI
+"Penn State (N)",PSU
+"Drexel (N)",DREX
+"Utah (N)",UTAH
+"Davidson (N)",DAV
+"Pittsburgh (N)",PITT
+"North Carolina Central",
+Southern,SOU
+"Grand Canyon",GCU
+Houston,HOU
+Quinnipiac,
+"Oregon State",ORST
+"UT Rio Grande Valley",
+"Utah State",USU
+"Virginia Tech (N)",VT
+"St. Josephs (N)",STJ
+"Fordham (N)",FOR
+"Boston College (N)",BC
+"South Carolina (N)",SCAR
+"St. Johns (N)",SJU
+UMKC,
+Louisville,LOU
+"Central Connecticut",
+Connecticut,CONN
+"No. Colorado (N)",UNCO
+"Mississippi State (N)",MSST
+"Coppin State",
+Creighton,CREI
+"Coll Of Charleston",
+"William & Mary",W&M
+"NC Greensboro",
+Wofford,
+"Sacramento State",SAC
+"Portland State",PRST
+"Alcorn State",
+"Texas Southern",TXSO
+"High Point",
+Winthrop,
+.Washington,
+.Arizona,
+"UL - Lafayette",ULL
+"Georgia State",GAST
+American,
+Army,
+"Loyola Maryland",L-MD
+"Boston U",
+"Albany NY",
+"Stony Brook",STON
+"U of Oregon",
+"U of Arizona",
+".Georgia Southern",GASO
+".Arkansas State",
+Howard,
+"MD Eastern Shore",
+".Arizona State",
+".Washington State",WSU
+"St. Francis PA",
+"Robert Morris",
+"Long Island",
+"St. Francis NY",
+"Morgan State",
+Hampton,HAMP
+"Holy Cross",HC
+Lehigh,
+"Charleston Sou",
+"Gardner Webb",
+".Arkansas Little Rock",
+".Georgia State",GAST
+"Boston College",BC
+"Colorado State",CSU
+"Fresno State",FRES
+Marshall,MRSH
+Niagra,NIAG
+Texas,TEX
+Lafayette,LAF
+Navy,NAVY
+"USC Upstate",
+"North Florida",
+Binghamton,BING
+"New Hampshire",
+"Cal Riverside",UCRV
+"Eastern Washington",EWU
+Massachusetts,UMASS
+"Delaware State",DSU
+"Savannah State",
+"Fairleigh Dickinson",FDU
+Wagner,WAG
+"Ark Pine Bluff",
+"Alabama A&M",
+"New Orleans",
+"SE Louisiana",
+"Nicholls State",
+"McNeese State",
+"NC Central",
+"Norfolk State",
+"Prairie View A&M",
+"Jackson State",JKST
+"UL Monroe",ULM
+"Arkansas LR",UALR
+"Wichita State",WICH
+"CS Bakersfield",CSB
