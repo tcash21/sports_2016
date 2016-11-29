@@ -23,7 +23,7 @@ time.sleep(x)
 def index():
     print "entered index"
     times = []
-    today = date.today() - timedelta(days=24)
+    today = date.today() - timedelta(days=31)
     today = today.strftime("%Y%m%d")
     url = urllib2.urlopen('http://www.espn.com/nba/scoreboard/_/date/' + today)
     soup = bs(url.read(), ['fast', 'lxml'])

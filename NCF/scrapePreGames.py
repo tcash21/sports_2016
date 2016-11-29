@@ -31,37 +31,7 @@ def extractStats(statName):
     return(combined_stats)
 
 week_num = str(14)
-#divisions = ['http://espn.go.com/college-football/scoreboard/_/year/2015/seasontype/2/week/' + week_num,
 divisions = ['http://espn.go.com/college-football/scoreboard/_/group/80/year/2016/seasontype/2/week/' + week_num]
-#divisions = ['http://www.espn.com/college-football/scoreboard/_/year/2016/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/70/year/2016/seasontype/2/week/' + week_num]
-#'http://espn.go.com/college-football/scoreboard/_/group/51/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/151/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/4/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/5/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/12/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/18/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/15/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/17/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/9/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/8/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/37/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/81/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/20/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/40/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/48/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/32/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/22/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/24/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/21/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/25/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/26/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/27/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/28/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/31/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/29/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/30/year/2015/seasontype/2/week/' + week_num]
-#'http://espn.go.com/college-football/scoreboard/_/group/35/year/2015/seasontype/2/week/' +  week_num]
 
 for division in divisions:
     halftime_ids = []
@@ -109,46 +79,6 @@ for division in divisions:
                 with db:
                     db.execute('''INSERT INTO games(game_id, team1, team2, game_date) VALUES(?,?,?,?)''', (halftime_ids[i], team1, team2, gdate))
                     db.commit()
-                    #try:
-                    #    firstDowns = extractStats('firstDowns')
-                    #    thirdDowns = extractStats('thirdDownEff')
-                    #    fourthDowns = extractStats('fourthDownEff')
-                    #    totalYards = extractStats('totalYards')
-                    #    passing = extractStats('netPassingYards')
-                    #    completionAtt = extractStats('completionAttempts')
-                    #    ypp = extractStats('yardsPerPass')
-                    #    ints = extractStats('interceptions')
-                    #    rushingYards = extractStats('rushingYards')
-                    #    rushingAtt = extractStats('rushingAttempts')
-                    #    yardsPerRushAttempt = extractStats('yardsPerRushAttempt')
-                    #    totalPenaltiesYards = extractStats('totalPenaltiesYards')
-                    #    turnovers = extractStats('turnovers')
-                    #    fumblesLost = extractStats('fumblesLost')
-                    #    try:
-                    #        possessionTime = extractStats('possessionTime')
-                    #    except:
-                    #        possessionTime = ['-','-']
-                    #except:
-                    #    print sys.exc_info()[0]
-                    #    pass
-                    #try:
-                    #    with db:
-                    #        db.execute('''INSERT INTO halfBoxScore(game_id, team, first_downs, third_downs, fourth_downs, total_yards, passing, comp_att, 
-                    #                            yards_per_pass, rushing, rushing_attempts, yards_per_rush, penalties, turnovers, fumbles_lost, ints_thrown,
-                    #                            possession, score ) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)''', (halftime_ids[i], team1, int(firstDowns[0]), thirdDowns[0],fourthDowns[0],int(totalYards[0]),int(passing[0]),completionAtt[0],float(ypp[0]),int(rushingYards[0]),int(rushingAtt[0]),float(yardsPerRushAttempt[0]),totalPenaltiesYards[0],int(turnovers[0]),int(fumblesLost[0]),int(ints[0]),possessionTime[0], score1))
-                    #        db.commit()
-                    #except:
-                    #    print sys.exc_info()[0]
-                    #    pass
-                    #try:
-                    #    with db:
-                    #        db.execute('''INSERT INTO halfBoxScore(game_id, team, first_downs, third_downs, fourth_downs, total_yards, passing, comp_att, 
-                    #                            yards_per_pass, rushing, rushing_attempts, yards_per_rush, penalties, turnovers, fumbles_lost, ints_thrown,
-                    #                            possession, score ) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)''', (halftime_ids[i], team2, int(firstDowns[1]),thirdDowns[1],fourthDowns[1],int(totalYards[1]),int(passing[1]),completionAtt[1],float(ypp[1]),int(rushingYards[1]),int(rushingAtt[1]),float(yardsPerRushAttempt[1]),totalPenaltiesYards[1],int(turnovers[1]),int(fumblesLost[1]),int(ints[1]),possessionTime[1], score2))
-                    #        db.commit()
-                    #except:
-                    #    print sys.exc_info()[0]
-                    #    pass
             except:
                 print sys.exc_info()[0]
                 pass
