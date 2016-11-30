@@ -77,26 +77,26 @@ def index():
             tds2 = [td.text for td in team2_tds]
             team1 = soup.findAll('span', {'class':'abbrev'})[0].text
             team2 = soup.findAll('span', {'class':'abbrev'})[1].text
+            #try:
+                #with db:
+                #    db.execute('''INSERT INTO NBAgames(game_id, team1, team2, game_date, game_time) VALUES(?,?,?,?,?)''', (halftime_ids[i], team1, team2, gdate, game_time))
+                #    db.commit()
             try:
-                with db:
-                    db.execute('''INSERT INTO NBAgames(game_id, team1, team2, game_date, game_time) VALUES(?,?,?,?,?)''', (halftime_ids[i], team1, team2, gdate, game_time))
-                    db.commit()
-                try:
-                    date_time = str(datetime.datetime.now())
-                    db.execute('''INSERT INTO NBAstats(game_id, team, fgma, tpma, ftma, oreb, dreb, reb, ast, stl, blk, turnovers, pf, pts, timestamp ) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)''', (halftime_ids[i], team1, tds1[2], tds1[3], tds1[4], int(tds1[5]), int(tds1[6]), int(tds1[7]), int(tds1[8]), int(tds1[9]), int(tds1[10]), int(tds1[11]), int(tds1[12]), int(tds1[14]), date_time))
-                    db.commit()
-                except sqlite3.IntegrityError:
-                    print sqlite3.Error
-                try:
-                    date_time = str(datetime.datetime.now())
-                    db.execute('''INSERT INTO NBAstats(game_id, team, fgma, tpma, ftma, oreb, dreb, reb, ast, stl, blk, turnovers, pf, pts, timestamp ) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)''', (halftime_ids[i], team2, tds2[2], tds2[3], tds2[4], int(tds2[5]), int(tds2[6]), int(tds2[7]), int(tds2[8]), int(tds2[9]), int(tds2[10]), int(tds2[11]), int(tds2[12]), int(tds2[14]), date_time))
-                    db.commit()
-                except sqlite3.IntegrityError:
-                    print sqlite3.Error            
-                except sqlite3.IntegrityError:
-                    print 'Record Already Exists'    
-            except:
-                print 'No Boxscore Available'     
+                date_time = str(datetime.datetime.now())
+                db.execute('''INSERT INTO NBAstats(game_id, team, fgma, tpma, ftma, oreb, dreb, reb, ast, stl, blk, turnovers, pf, pts, timestamp ) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)''', (halftime_ids[i], team1, tds1[2], tds1[3], tds1[4], int(tds1[5]), int(tds1[6]), int(tds1[7]), int(tds1[8]), int(tds1[9]), int(tds1[10]), int(tds1[11]), int(tds1[12]), int(tds1[14]), date_time))
+                db.commit()
+            except sqlite3.IntegrityError:
+                print sqlite3.Error
+            try:
+                date_time = str(datetime.datetime.now())
+                db.execute('''INSERT INTO NBAstats(game_id, team, fgma, tpma, ftma, oreb, dreb, reb, ast, stl, blk, turnovers, pf, pts, timestamp ) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)''', (halftime_ids[i], team2, tds2[2], tds2[3], tds2[4], int(tds2[5]), int(tds2[6]), int(tds2[7]), int(tds2[8]), int(tds2[9]), int(tds2[10]), int(tds2[11]), int(tds2[12]), int(tds2[14]), date_time))
+                db.commit()
+            except sqlite3.IntegrityError:
+                print sqlite3.Error            
+            # except sqlite3.IntegrityError:
+            #        print 'Record Already Exists'    
+            #except:
+            #    print 'No Boxscore Available'     
 index()
 db.close()
 

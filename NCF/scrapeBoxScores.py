@@ -31,37 +31,7 @@ def extractStats(statName):
     return(combined_stats)
 
 week_num = str(14)
-#divisions = ['http://espn.go.com/college-football/scoreboard/_/year/2015/seasontype/2/week/' + week_num,
 divisions = ['http://espn.go.com/college-football/scoreboard/_/group/80/year/2016/seasontype/2/week/' + week_num]
-#divisions = ['http://www.espn.com/college-football/scoreboard/_/year/2016/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/70/year/2016/seasontype/2/week/' + week_num]
-#'http://espn.go.com/college-football/scoreboard/_/group/51/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/151/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/4/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/5/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/12/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/18/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/15/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/17/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/9/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/8/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/37/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/81/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/20/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/40/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/48/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/32/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/22/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/24/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/21/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/25/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/26/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/27/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/28/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/31/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/29/year/2015/seasontype/2/week/' + week_num,
-#'http://espn.go.com/college-football/scoreboard/_/group/30/year/2015/seasontype/2/week/' + week_num]
-#'http://espn.go.com/college-football/scoreboard/_/group/35/year/2015/seasontype/2/week/' +  week_num]
 
 for division in divisions:
     halftime_ids = []
