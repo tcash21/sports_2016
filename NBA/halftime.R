@@ -174,7 +174,7 @@ result$first.half.pts.total <- result$HALF_PTS.TEAM1 + result$HALF_PTS.TEAM2
 result$signal2 <- result$poss.total / result$first.half.pts.total
 result$line_diff <- as.numeric(result$LINE.TEAM1) - as.numeric(result$LINE_HALF.TEAM1)
 
-load("/home/ec2-user/sports2016/NBA/rf.dat")
+load("/home/ec2-user/sports2016/NBA/rf_model.Rdata")
 p <- predict(r, result)
 result$over_pred <- p
 

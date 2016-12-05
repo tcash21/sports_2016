@@ -23,7 +23,7 @@ time.sleep(x)
 def index():
     print "entered index"
     times = []
-    today = date.today() - timedelta(days=31)
+    today = date.today() - timedelta(days=1)
     today = today.strftime("%Y%m%d")
     url = urllib2.urlopen('http://www.espn.com/nba/scoreboard/_/date/' + today)
     soup = bs(url.read(), ['fast', 'lxml'])
@@ -36,7 +36,6 @@ def index():
         for i in range(0, len(ids)):
             x=random.randint(5, 10)
             time.sleep(x)
-    
             espn = 'http://scores.espn.go.com/' + league + '/boxscore?gameId=' + ids[i]
             url = urllib2.urlopen(espn)
             soup = bs(url.read(), ['fast', 'lxml'])
