@@ -192,6 +192,9 @@ the_data1 <- result[grep(today, result$GAME_DATE),]
 the_data2 <- result[grep(tomorrow, result$GAME_DATE),]
 the_data3 <- result[grep(yesterday, result$GAME_DATE),]
 result <- rbind(the_data1, the_data2, the_data3)
+result$GAME_DATE<-strptime(result$GAME_DATE, format='%m/%d/%Y %H:%M')
+result <- result[order(result$GAME_DATE, decreasing=TRUE),]
+
 gs_edit_cells(ncf, ws='halftime', input=colnames(result), byrow=TRUE, anchor="A1")
 
 gs_edit_cells(ncf, ws='halftime', input = result, anchor="A2", col_names=FALSE, trim=TRUE)
