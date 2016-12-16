@@ -170,6 +170,7 @@ nbafinal <- nbafinal[,c(1,2,17:22,6:16)]
 f$key <- paste(f$GAME_ID, f$TEAM)
 f<-cbind(f, nbafinal[match(f$key, nbafinal$key),])
 all <- f
+
 #all <- all[-match(names(which(table(all$GAME_ID) != 2)), all$GAME_ID),]
 all <- all[order(all$GAME_ID),]
 all$the_team <- ""
