@@ -30,7 +30,7 @@ halflines <- lDataFrames[[which(tables == "NBASBHalfLines")]]
 games <- lDataFrames[[which(tables == "NBAGames")]]
 lines <- lDataFrames[[which(tables == "NBASBLines")]]
 teamstats <- lDataFrames[[which(tables == "NBAseasonstats")]]
-boxscores <- lDataFrames[[which(tables == "NBAstats")]]
+boxscores <- lDataFrames[[which(tables == "NBAStats")]]
 lookup <- lDataFrames[[which(tables == "NBASBTeamLookup")]]
 nbafinal <- lDataFrames[[which(tables == "NBAfinalstats")]]
 seasontotals <- lDataFrames[[which(tables == "NBAseasontotals")]]
@@ -209,6 +209,9 @@ result$final.possessions.TEAM2 <- result$fga.TEAM2 + (result$fta.TEAM2 / 2) + re
 
 result <- subset(result, select=c(GAME_ID, GAME_DATE, TEAM.TEAM1, TEAM.TEAM2, HALF_PTS.TEAM1, HALF_PTS.TEAM2, LINE_HALF.TEAM1, SPREAD_HALF.TEAM1, LINE.TEAM1, SPREAD.TEAM1, possessions.TEAM1, possessions.TEAM2, final.possessions.TEAM1,
 					final.possessions.TEAM2, pts.TEAM1, pts.TEAM2))
+result$GAME_DATE <- strptime(result$GAME_DATE, format="%m/%d/%Y %H:%M")
+result <- result[order(result$GAME_DATE, decreasing=TRUE),]
+result$GAME_DATE <- as.character(result$GAME_DATE)
 
 library(googlesheets)
 library(dplyr)

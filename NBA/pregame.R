@@ -25,7 +25,7 @@ game_time from ", tables[[i]], " group by away_team, home_team, game_date;"))
 
 lines <- lDataFrames[[which(tables == "NBASBLines")]]
 lookup <- lDataFrames[[which(tables == "NBASBTeamLookup")]]
-halfbox <- lDataFrames[[which(tables == "NBAstats")]]
+halfbox <- lDataFrames[[which(tables == "NBAStats")]]
 finalbox <- lDataFrames[[which(tables == "NBAfinalstats")]]
 games <- lDataFrames[[which(tables == "NBAGames")]]
 
