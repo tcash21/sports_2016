@@ -36,7 +36,6 @@ lookup <- lDataFrames[[which(tables == "NCAASBTeamLookup")]]
 ncaafinal <- lDataFrames[[which(tables == "NCAAfinalstats")]]
 seasontotals <- lDataFrames[[which(tables == "NCAAseasontotals")]]
 
-
 b<-apply(boxscores[,3:5], 2, function(x) strsplit(x, "-"))
 boxscores$fgm <- do.call("rbind",b$fgma)[,1]
 boxscores$fga <- do.call("rbind",b$fgma)[,2]
