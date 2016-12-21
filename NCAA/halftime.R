@@ -1,8 +1,8 @@
 library(randomForest)
-library(data.table)
+#library(data.table)
 library(RSQLite)
-#library(plyr)
 library(dplyr)
+library(data.table)
 
 #setwd("/home/ec2-user/sports2016/NCF/")
 
