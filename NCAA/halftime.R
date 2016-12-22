@@ -178,7 +178,7 @@ yesterday <- format(Sys.Date() - 1, "%m/%d/%Y")
 the_data1 <- result[grep(today, result$GAME_DATE),]
 the_data2 <- result[grep(tomorrow, result$GAME_DATE),]
 the_data3 <- result[grep(yesterday, result$GAME_DATE),]
-result <- rbind(the_data1, the_data2, the_data3)
+#result <- rbind(the_data1, the_data2, the_data3)
 result$temp<-strptime(result$GAME_DATE, format='%m/%d/%Y %H:%M')
 result <- result[order(result$temp, decreasing=TRUE),]
 result <- subset(result, select=c(-temp))

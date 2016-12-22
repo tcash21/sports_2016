@@ -271,6 +271,10 @@ wide <- subset(wide, select=c(GAME_ID, GAME_DATE.x.TEAM2, TEAM.x.TEAM1, TEAM.x.T
 colnames(wide) <- c("GAME_ID", "GAME_DATE", "TEAM1", "TEAM2", "HALF_POSS.TEAM1", "HALF_POSS.TEAM2", "FINAL_POSS.TEAM1", "FINAL_POSS.TEAM2", "HALF_PTS.TEAM1", "HALF_PTS.TEAM2", 
 		"FINAL_PTS.TEAM1", "FINAL_PTS.TEAM2")
 
+wide$temp<-strptime(wide$GAME_DATE, format='%m/%d/%Y')
+wide <- wide[order(wide$temp, decreasing=TRUE),]
+wide <- subset(wide, select=c(-temp))
+
 library(googlesheets)
 library(dplyr)
 
