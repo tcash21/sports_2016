@@ -16,9 +16,9 @@ db = sqlite3.connect('/home/ec2-user/sports2016/NCF/sports.db')
 x=random.randint(3, 10)
 time.sleep(x)
 
-week_num = str(15)
+week_num = str(1)
 #divisions = ['http://espn.go.com/college-football/scoreboard/_/year/2015/seasontype/2/week/' + week_num,
-divisions = ['http://espn.go.com/college-football/scoreboard/_/group/80/year/2016/seasontype/2/week/' + week_num]
+divisions = ['http://espn.go.com/college-football/scoreboard/_/group/80/year/2016/seasontype/3/week/' + week_num]
 #'http://espn.go.com/college-football/scoreboard/_/group/1/year/2015/seasontype/2/week/' + week_num,
 #'http://espn.go.com/college-football/scoreboard/_/group/51/year/2015/seasontype/2/week/' + week_num,
 #'http://espn.go.com/college-football/scoreboard/_/group/151/year/2015/seasontype/2/week/' + week_num,

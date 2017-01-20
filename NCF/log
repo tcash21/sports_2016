@@ -1,0 +1,1 @@
+/usr/lib64/R/bin/BATCH: line 60:  8797 Killed                  ${R_HOME}/bin/R -f ${in} ${opts} ${R_BATCH_OPTIONS} > ${out} 2>&1

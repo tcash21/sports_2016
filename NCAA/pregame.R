@@ -47,7 +47,7 @@ lines <- games
 lines$game_time <- as.POSIXct(paste(lines$game_date, lines$game_time), format='%m/%d/%Y %H:%M')
 lines <- lines[order(lines$game_time, decreasing=TRUE),]
 lines <- subset(lines, select = -c(key))
-lines$spread <- as.numeric(gsub("\\+", "", lines$spread)) * -1
+lines$spread <- as.numeric(gsub("\\+", "", lines$spread)) 
 
 library(dplyr)
 

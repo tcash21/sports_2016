@@ -175,15 +175,15 @@ ncf <- gs_key('1D_uKs4UuAkM4rijIphX-0x2gdqT4wgsXCdC1nTLnMMA', visibility = 'priv
 today <- format(Sys.Date(), "%m/%d/%Y")
 tomorrow <- format(Sys.Date() + 1, "%m/%d/%Y")
 yesterday <- format(Sys.Date() - 1, "%m/%d/%Y")
-the_data1 <- result[grep(today, result$GAME_DATE),]
-the_data2 <- result[grep(tomorrow, result$GAME_DATE),]
-the_data3 <- result[grep(yesterday, result$GAME_DATE),]
-result <- rbind(the_data1, the_data2, the_data3)
+#the_data1 <- result[grep(today, result$GAME_DATE),]
+#the_data2 <- result[grep(tomorrow, result$GAME_DATE),]
+#the_data3 <- result[grep(yesterday, result$GAME_DATE),]
+#result <- rbind(the_data1, the_data2, the_data3)
 result$temp<-strptime(result$GAME_DATE, format='%m/%d/%Y %H:%M')
 result <- result[order(result$temp, decreasing=TRUE),]
 result <- subset(result, select=c(-temp))
 
-gs_edit_cells(ncf, ws='halftime', input=colnames(result), byrow=TRUE, anchor="A1")
+gs_edit_cells(ncf, ws='all halftime', input=colnames(result), byrow=TRUE, anchor="A1")
 
-gs_edit_cells(ncf, ws='halftime', input = result, anchor="A2", col_names=FALSE, trim=TRUE)
+gs_edit_cells(ncf, ws='all halftime', input = result, anchor="A2", col_names=FALSE, trim=TRUE)
 
