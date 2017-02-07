@@ -343,7 +343,7 @@ result$TEAM1.last7.pts <- i
 i<-avg.points.last.7[match(result$TEAM.TEAM2, avg.points.last.7$team, 0),]$V1
 result$TEAM2.last7.pts <- i
 
-write.csv(result, file="/home/ec2-user/sports2015/NBA/sportsbook.csv", row.names=FALSE)
+write.csv(result, file="/home/ec2-user/sports2016/NBA/sportsbook.csv", row.names=FALSE)
 
 sendmailV <- Vectorize( sendmail , vectorize.args = "to" )
 #emails <- c( "<tanyacash@gmail.com>" , "<malloyc@yahoo.com>", "<sschopen@gmail.com>")
@@ -353,7 +353,7 @@ from <- "<tanyacash@gmail.com>"
 subject <- "Weekly NBA Data Report - SportsBook"
 body <- c(
   "Chris -- see the attached file.",
-  mime_part("/home/ec2-user/sports2015/NBA/sportsbook.csv", "WeeklyDataNBA_SB.csv")
+  mime_part("/home/ec2-user/sports2016/NBA/sportsbook.csv", "WeeklyDataNBA_SB.csv")
 )
 sendmailV(from, to=emails, subject, body)
 

@@ -58,5 +58,7 @@ gs_auth(token = '/home/ec2-user/sports2016/NCF/ttt.rds')
 ncf <- gs_key('1D_uKs4UuAkM4rijIphX-0x2gdqT4wgsXCdC1nTLnMMA', visibility = 'private')
 
 gs_edit_cells(ncf, ws='pregame', input=colnames(lines), byrow=TRUE, anchor="A1")
+lines$game_date <- as.Date(lines$game_date, '%m/%d/%Y')
+lines <- lines[lines$game_date >= format(Sys.Date()-3, "%Y-%m-%d"),]
 
 gs_edit_cells(ncf, ws='pregame', input = lines, anchor="A2", col_names=FALSE, trim=TRUE)

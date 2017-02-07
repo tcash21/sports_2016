@@ -56,6 +56,7 @@ teamstats$key <- paste(teamstats$team, teamstats$the_date)
 m2<-merge(m1, teamstats, by="key")
 lookup$away_team <- lookup$sb_team
 lookup$home_team <- lookup$sb_team
+#m2$home_team <- games[match(m2$game_id, games$game_id),]$team2
 
 ## Total Lines
 lines$game_time<-as.POSIXlt(lines$game_time)
@@ -100,6 +101,7 @@ m3h<-m3h[match(l2$key.y, m3h$key),]
 m3h<-cbind(m3h, l2[,94:96])
 colnames(m3h)[44:45] <- c("home_team.x", "home_team.y")
 colnames(m3a)[40] <- "home_team"
+#m2$newkey <- paste(m2$game_id, m2$team1, m2$team2)
 if(dim(m3a)[1] > 0){
  m3a$hometeam <- FALSE
  m3h$hometeam <- TRUE
@@ -173,6 +175,7 @@ all <- f
 
 #all <- all[-match(names(which(table(all$GAME_ID) != 2)), all$GAME_ID),]
 all <- all[order(all$GAME_ID),]
+all$home_team <- games[match(all$game_id, games$game_id),]$team2
 all$the_team <- ""
 all[seq(from=1, to=dim(all)[1], by=2),]$the_team <- "TEAM1"
 all[seq(from=2, to=dim(all)[1], by=2),]$the_team <- "TEAM2"
@@ -207,8 +210,8 @@ result$oreb.TEAM2 <- as.numeric(result$oreb.TEAM2)
 result$final.possessions.TEAM1 <- result$fga.TEAM1 + (result$fta.TEAM1 / 2) + result$turnovers.TEAM1 - result$oreb.TEAM1
 result$final.possessions.TEAM2 <- result$fga.TEAM2 + (result$fta.TEAM2 / 2) + result$turnovers.TEAM2 - result$oreb.TEAM2
 
-result <- subset(result, select=c(GAME_ID, GAME_DATE, TEAM.TEAM1, TEAM.TEAM2, HALF_PTS.TEAM1, HALF_PTS.TEAM2, LINE_HALF.TEAM1, SPREAD_HALF.TEAM1, LINE.TEAM1, SPREAD.TEAM1, possessions.TEAM1, possessions.TEAM2, final.possessions.TEAM1,
-					final.possessions.TEAM2, pts.TEAM1, pts.TEAM2))
+result <- subset(result, select=c(GAME_ID, GAME_DATE, TEAM.TEAM1, TEAM.TEAM2, HALF_PTS.TEAM1, HALF_PTS.TEAM2, LINE_HALF.TEAM1, SPREAD_HALF.TEAM1, LINE.TEAM1, SPREAD.TEAM1, possessions.TEAM1, 
+					possessions.TEAM2, final.possessions.TEAM1,final.possessions.TEAM2, pts.TEAM1, pts.TEAM2))
 result$GAME_DATE <- strptime(result$GAME_DATE, format="%m/%d/%Y %H:%M")
 result <- result[order(result$GAME_DATE, decreasing=TRUE),]
 result$GAME_DATE <- as.character(result$GAME_DATE)
@@ -221,6 +224,10 @@ gs_auth(token = '/home/ec2-user/sports2016/NCF/ttt.rds')
 ncf <- gs_key('17KG9hOzgGc9phDwbLrALWDdc1ugslD2vUYFMHS7qZtg', visibility = 'private')
 
 gs_edit_cells(ncf, ws='postgame', input=colnames(result), byrow=TRUE, anchor="A1")
+
+#result <- result[result$GAME_DATE == format(Sys.Date()-1, "%m/%d/%Y"),]
+
+result <- result[as.Date(result$GAME_DATE) == format(Sys.Date()-1, "%Y-%m-%d"),]
 
 gs_edit_cells(ncf, ws='postgame', input = result, anchor="A2", col_names=FALSE, trim=TRUE)
 

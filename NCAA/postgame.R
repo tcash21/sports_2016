@@ -183,8 +183,9 @@ final[,c(38,41:63)]<-apply(final[,c(38,41:63)], 2, as.numeric)
 
 result <- final
 result$team <- ""
-result[seq(from=1, to=dim(result)[1], by=2),]$team <- "TEAM1"
-result[seq(from=2, to=dim(result)[1], by=2),]$team <- "TEAM2"
+
+result$team <- ifelse(result$HOME_TEAM, "TEAM2", "TEAM1")
+
 wide<-reshape(result, direction = "wide", idvar="GAME_ID", timevar="team")
 wide$secondHalfPts.TEAM1 <- wide$FINAL_PTS.TEAM1 - wide$HALF_PTS.TEAM1
 wide$secondHalfPts.TEAM2 <- wide$FINAL_PTS.TEAM2 - wide$HALF_PTS.TEAM2
@@ -283,6 +284,8 @@ gs_auth(token = '/home/ec2-user/sports2016/NCF/ttt.rds')
 ncf <- gs_key('1D_uKs4UuAkM4rijIphX-0x2gdqT4wgsXCdC1nTLnMMA', visibility = 'private')
 
 gs_edit_cells(ncf, ws='postgame', input=colnames(wide), byrow=TRUE, anchor="A1")
+wide$GAME_DATE <- as.Date(wide$GAME_DATE, '%m/%d/%Y')
+wide <- wide[wide$GAME_DATE == format(Sys.Date()-1, "%Y-%m-%d"),]
 
 gs_edit_cells(ncf, ws='postgame', input = wide, anchor="A2", col_names=FALSE, trim=TRUE)
 

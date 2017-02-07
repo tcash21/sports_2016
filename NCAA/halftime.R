@@ -182,7 +182,7 @@ result <- rbind(the_data1, the_data2, the_data3)
 result$temp<-strptime(result$GAME_DATE, format='%m/%d/%Y %H:%M')
 result <- result[order(result$temp, decreasing=TRUE),]
 result <- subset(result, select=c(-temp))
-
+result$diff <- as.numeric(as.character(result$LINE)) - (result$HALF_PTS.TEAM1 + result$HALF_PTS.TEAM2)
 gs_edit_cells(ncf, ws='halftime', input=colnames(result), byrow=TRUE, anchor="A1")
 
 gs_edit_cells(ncf, ws='halftime', input = result, anchor="A2", col_names=FALSE, trim=TRUE)

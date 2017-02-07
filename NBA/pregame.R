@@ -52,6 +52,7 @@ lines$spread <- as.numeric(gsub("\\+", "", lines$spread)) * -1
 library(dplyr)
 
 lines <- lines[c("game_id", "game_time", "away_espn", "home_espn", "line", "spread", "game_date")]
+write.csv(lines, file="/home/ec2-user/sports2016/NBA/lines.csv", row.names=FALSE)
 
 gs_auth(token = '/home/ec2-user/sports2016/NCF/ttt.rds')
 
@@ -59,4 +60,8 @@ ncf <- gs_key('17KG9hOzgGc9phDwbLrALWDdc1ugslD2vUYFMHS7qZtg', visibility = 'priv
 
 gs_edit_cells(ncf, ws='pregame', input=colnames(lines), byrow=TRUE, anchor="A1")
 
+lines <- lines[lines$game_date == format(Sys.Date(), "%m/%d/%Y"),]
 gs_edit_cells(ncf, ws='pregame', input = lines, anchor="A2", col_names=FALSE, trim=TRUE)
+
+#gs_upload("/home/ec2-user/sports2016/NBA/lines.csv", sheet_title = 'pregame')
+#gs_add_row(ncf, ws='pregame', input = lines)
