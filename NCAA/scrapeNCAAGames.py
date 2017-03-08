@@ -30,7 +30,7 @@ def index():
     halftime_ids = []
     today = date.today()
     today = today.strftime("%Y%m%d")
-    url = urllib2.urlopen('http://www.espn.com/mens-college-basketball/scoreboard/_/date/' + today)
+    url = urllib2.urlopen('http://www.espn.com/mens-college-basketball/scoreboard/_/group/50/date/' + today)
     soup = bs(url.read(), ['fast', 'lxml'])
     data=re.search('window.espn.scoreboardData.*{(.*)};</script>', str(soup)).group(0)
     jsondata=re.search('({.*});window', data).group(1)

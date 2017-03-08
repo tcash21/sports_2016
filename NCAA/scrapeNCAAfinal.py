@@ -38,13 +38,11 @@ def index():
         x=random.randint(2, 4)
         time.sleep(x)
         soup = bs(url.read(), ['fast', 'lxml'])
-        data=re.search('window.espn.scoreboardData.*{(.*)};</script>', str(soup)).group(0)
-        jsondata=re.search('({.*});window', data).group(1)
-        j=jsonpickle.decode(jsondata)
-        games=j['events']
-        status = [game['status'] for game in games]
-        final = [s['type']['shortDetail'] for s in status]
-        index = [i for i, j in enumerate(final) if j == 'Final']
+	j = jsonpickle.decode(re.search("window\.espn\.scoreboardData\s+=\s+({.*?});", str(soup)).group(1))
+        games = j['events']
+        status = [g['status'] for g in games]
+        statuses = [s['type']['shortDetail'] for s in status]
+        index = [i for i, j in enumerate(statuses) if j == 'Final']
         ids = [game['id'] for game in games]
         final_ids = [j for k, j in enumerate(ids) if k in index]
         #final_ids = list(set(final_ids) - set(game_ids)) 
